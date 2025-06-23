@@ -1,0 +1,7 @@
+requests
+pyfiglet
+colorama
+tqdm
+lxml
+frida-tools
+pyelftools

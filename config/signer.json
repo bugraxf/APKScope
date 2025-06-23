@@ -1,0 +1,10 @@
+{
+  "decompiled_dir": "app",
+  "rebuilt_apk": "app-patched.apk",
+  "signed_apk": "output-signed.apk",
+  "keystore": "my-release-key.keystore",
+  "alias": "alias_name",
+  "storepass": "Test1234",
+  "dname": "CN=Test Kullanıcı, OU=IT, O=TestSirket, L=Bursa, S=Bursa, C=TR",
+  "apksigner_path": "/Users/tcahmdemirel/Library/Android/sdk/build-tools/35.0.0/apksigner"
+}
