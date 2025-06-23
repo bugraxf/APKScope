@@ -6,7 +6,6 @@ APKScope is a comprehensive and automation-focused tool designed to simplify the
 
 ## 🚀 Features
 
-- **Device Management with ADB:** Lists connected devices and allows you to select one.
 - **Proxy and Certificate Settings:** Set up proxies (e.g., Burp) and install CA certificates on the device.
 - **Frida Server Setup & Script Execution:** Downloads and starts the appropriate Frida server for your device, and runs Frida scripts.
 - **Drozer Integration:** Downloads and installs Drozer and the Drozer agent APK, sets up port forwarding, and provides console access.
@@ -14,6 +13,7 @@ APKScope is a comprehensive and automation-focused tool designed to simplify the
 - **Jadx Decompile & Key/Secret Search:** Decompiles APKs with Jadx and searches for keywords or regex patterns.
 - **/data/data Regex Analysis:** Searches for keys/secrets in app data using regex.
 - **APK Build & Sign:** Automates rebuilding and signing of decompiled APKs.
+- **Device Management with ADB:** Lists connected devices and allows you to select one.
 
 ---
 
@@ -22,20 +22,29 @@ APKScope is a comprehensive and automation-focused tool designed to simplify the
 ### Requirements
 
 - ADB (Android Platform Tools)
-- Java (for Apktool)
 - Jadx and Apktool (can be downloaded automatically on first run)
 - Frida and Drozer (can be installed from the menu)
 
 ### Installing Dependencies
 
-```bash
-pip install -r requirements.txt
+
+1. Clone the repository:
+
+```sh
+git clone https://github.com/bugraxf/APKScope.git
+cd APKScope
+```
+
+2. Install the required Python packages:
+
+```sh
+pip3 install -r requirements.txt
 ```
 
 ### Running APKScope
 
 ```bash
-python APKScope.py
+python3 APKScope.py
 ```
 
 If Jadx or Apktool are missing on first run, you will be prompted to download them automatically.
@@ -67,6 +76,8 @@ APKScope/
 ├── tool/
 │   ├── jadx/
 │   └── apktool/
+|   └── frida-server/
+|   └── drozer
 ├── config/
 │   ├── regex.json
 │   ├── blacklist.json
@@ -74,6 +85,7 @@ APKScope/
 ├── result/
 ├── decompiled_data/
 ├── dumped_data/
+├── app/
 └── script/
 ```
 
