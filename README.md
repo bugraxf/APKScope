@@ -54,7 +54,8 @@ If Jadx or Apktool are missing on first run, you will be prompted to download th
 ## 📋 Usage
 
 When the program starts, it lists connected devices and asks you to select one. Then, you can choose from the following main menu options:
-
+ ![Drozer](example/apkscope.png)
+ 
 ### Main Menu
 
 - **1) Environment Config Setup:** Proxy configuration and Burp certificate installation.
