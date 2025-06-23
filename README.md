@@ -97,12 +97,12 @@ APKScope/
 ### 1. Environment Config Setup
 - Proxy configuration
 - Certificate installation (e.g., Burp)
-
+ ![Drozer](example/burp.gif)
 ### 2. Drozer Tools
 - Install Drozer agent and set up port forwarding
 - Retrieve app info via Drozer console
 - IPC tests and attack surface analysis
-  ![Drozer](example/drozer_example.gif)
+  ![Drozer](example/drozer.gif)
 
 ### 3. Analysis Tools
 - Pull app data (/data/data)
