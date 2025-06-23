@@ -89,6 +89,7 @@ APKScope/
 - Install Drozer agent and set up port forwarding
 - Retrieve app info via Drozer console
 - IPC tests and attack surface analysis
+  ![Drozer](example/drozer_example.gif)
 
 ### 3. Analysis Tools
 - Pull app data (/data/data)
