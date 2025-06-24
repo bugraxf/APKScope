@@ -95,14 +95,16 @@ APKScope/
 ## 🔍 Menu Descriptions
 
 ### 1. Environment Config Setup
+Once you provide the IP address, port information, and the Burp certificate path, you will be able to view the traffic through Burp.
 - Proxy configuration
 - Certificate installation (e.g., Burp)
- ![Drozer](example/burp.gif)
+![BURP Config](example/burp.gif)
 ### 2. Drozer Tools
+In step 1, the Drozer and Drozer Agent APKs are installed. Once the agent is activated through the interface, you can perform an attack surface analysis using Drozer.
 - Install Drozer agent and set up port forwarding
 - Retrieve app info via Drozer console
 - IPC tests and attack surface analysis
-  ![Drozer](example/drozer.gif)
+![Drozer](example/drozer.gif)
 
 ### 3. Analysis Tools
 - Pull app data (/data/data)
@@ -117,19 +119,27 @@ APKScope/
 - APK attack surface analysis (decompile + manifest analysis)
   By selecting the third-party application you want to analyze from the device, you can examine security-related features such as permissions, activities, content providers, backup settings, and cleartext traffic. Additionally, the relevant ADB commands are automatically generated for your convenience.
 ![attack surface analysis ](example/Attack%20Surface-1.png)
+
 ![attack surface analysis ](example/Attack%20Surface-2.png) 
 *Jadx decompile and key/secret search
 -By selecting option 1, you can list the third-party applications installed on the device, pull them from the device, and then perform secret analysis within the APK package by choosing step 2 (search) or step 3 (regex-based analysis using config/regex.json).To reduce false positives in the output, you can improve the patterns using a blacklist(config/blacklist.json).
 ![regex analysis](example/regex.gif)
 *You can list the third-party applications installed on the device and perform regex-based analysis on the local storage of the selected application under /data/data/<package-name> using config/regex.json. To reduce false positives in the output, you can improve the patterns using a blacklist(config/blacklist.json).
+
 *Retrieve app info with dumpsys
-The Application Package Information (dumpsys) automatically collects and analyzes detailed information about a third-party application installed on the device. This analysis includes basic details such as the app's package name, version information, installation time, UID, and data directory; declared, requested, and granted permissions; registered Content Provider components; the main activity (entry point); and Broadcast Receivers that listen to system events. This information is critical for understanding which resources the app accesses, how it operates in the background, and for identifying potential security risks.
+ Retrieve information about installed applications
+ Inspect running services and activities
+ View memory usage and CPU statistics
+ Get detailed information from system services like battery, network, window, activity, and package
+ Access application permissions, manifest details, intent filters, and more
 
 
 ### 4. Frida Tools
+After setting up and starting the Frida server compatible with the Android device's architecture, you can execute Frida scripts.
 - Frida server setup and script execution
 ![regex analysis](example/frida.gif)
 ### 5. APK Build & Sign
+You need to select the package you want to decompile on the device. Once the decompilation process is complete, you can modify the desired sections under the /app directory and then re-sign the new APK package. To perform the signing process, make sure to fill in the required fields in the config/signer.json file.
 - Rebuild and sign decompiled APKs
 
 ### 6. Exit
@@ -147,7 +157,7 @@ The Application Package Information (dumpsys) automatically collects and analyze
 
 ## 💡 Notes
 
-- Some operations (e.g., running the Frida server) require root privileges. Ensure you have root access for smooth execution.
+- !!! Some operations (e.g., running the Frida server) require root privileges. Ensure you have root access for smooth execution.
 - The latest versions of Frida, Drozer, Apktool, and Jadx can be downloaded automatically.
 - You can edit the `config/regex.json` file to customize regex searches.
 - Analysis results and reports are saved as JSON and text files in the `result/` directory.
@@ -164,6 +174,4 @@ We welcome your pull requests and issues! You can add your own regex rules or an
 
 ---
 
-## 📝 License
 
-MIT License
