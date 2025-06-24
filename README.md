@@ -124,18 +124,18 @@ By selecting the third-party application you want to analyze from the device, yo
 ### Jadx decompile and key/secret search
 By selecting option 1, you can list the third-party applications installed on the device, pull them from the device, and then perform secret analysis within the APK package by choosing step 2 (search) or step 3 (regex-based analysis using config/regex.json).To reduce false positives in the output, you can improve the patterns using a blacklist(config/blacklist.json).
 ![regex analysis](example/regex.gif)
-![regex analysis](example/regex2.gif)
+
 ### /data/data/ secret search
 You can list the third-party applications installed on the device and perform regex-based analysis on the local storage of the selected application under /data/data/<package-name> using config/regex.json. To reduce false positives in the output, you can improve the patterns using a blacklist(config/blacklist.json).
+![regex analysis](example/regex2.gif)
 
-![regex analysis](example/dumpsys.png)
 ### Retrieve app info with dumpsys
  Retrieve information about installed applications
  Inspect running services and activities
  View memory usage and CPU statistics
  Get detailed information from system services like battery, network, window, activity, and package
  Access application permissions, manifest details, intent filters, and more
-
+![regex analysis](example/dumpsys.png)
 
 ### 4. Frida Tools
 After setting up and starting the Frida server compatible with the Android device's architecture, you can execute Frida scripts.
