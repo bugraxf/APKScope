@@ -111,11 +111,15 @@ APKScope/
 - /data/data regex analysis
 - Retrieve app info with dumpsys
 
-Pull app data (/data/data)
-
-![Drozer](example/data.data.png)
-Jadx decompile and key/secret search
-![Drozer](example/regex.gif)
+*Pull app data (/data/data)
+-You can list the third-party applications on the device and analyze their local storage data.
+![/data/data/<package-name>](example/data.data.png)
+- APK attack surface analysis (decompile + manifest analysis)
+  By selecting the third-party application you want to analyze from the device, you can examine security-related features such as permissions, activities, content providers, backup settings, and cleartext traffic. Additionally, the relevant ADB commands are automatically generated for your convenience.
+*Jadx decompile and key/secret search
+-By selecting option 1, you can list the third-party applications installed on the device, pull them from the device, and then perform secret analysis within the APK package by choosing step 2 (search) or step 3 (regex-based analysis using config/regex.json).To reduce false positives in the output, you can improve the patterns using a blacklist(config/blacklist.json).
+![regex analysis](example/regex.gif)
+*You can list the third-party applications installed on the device and perform regex-based analysis on the local storage of the selected application under /data/data/<package-name> using config/regex.json. To reduce false positives in the output, you can improve the patterns using a blacklist(config/blacklist.json).
 
 ### 4. Frida Tools
 - Frida server setup and script execution
