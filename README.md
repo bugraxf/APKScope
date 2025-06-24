@@ -25,6 +25,10 @@ APKScope is a comprehensive and automation-focused tool designed to simplify the
 - Jadx and Apktool (can be downloaded automatically on first run)
 - Frida and Drozer (can be installed from the menu)
 
+Android Emulator AVD (version 5.0 – 9.0, arm, arm64, x86, and x86_64, up to API 28)
+Genymotion Android VM (version 4.1 – 11.0, arm64 and x86, up to API 30)
+With root privileges, advanced capabilities such as system-level modifications, Frida instrumentation, certificate installation, and data extraction become fully operational.
+
 ### Installing Dependencies
 
 
