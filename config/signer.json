@@ -6,5 +6,5 @@
   "alias": "alias_name",
   "storepass": "Test1234",
   "dname": "CN=Test Kullanıcı, OU=IT, O=TestSirket, L=Bursa, S=Bursa, C=TR",
-  "apksigner_path": "/Users/tcahmdemirel/Library/Android/sdk/build-tools/35.0.0/apksigner"
+  "apksigner_path": "/usr/bin/apksigner"
 }
