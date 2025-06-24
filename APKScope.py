@@ -1770,6 +1770,7 @@ def decompile_with_jadx_and_search(device):
         stop_event = threading.Event()
         spinner_thread = threading.Thread(target=show_spinner, args=("Decompiling, please wait...", stop_event))
         spinner_thread.start()
+        apk_path = os.path.abspath(apk_path)
         result = subprocess.run([jadx_path, "-d", out_dir, apk_path], capture_output=True, text=True)
         stop_event.set()
         spinner_thread.join()
