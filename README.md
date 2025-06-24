@@ -111,6 +111,12 @@ APKScope/
 - /data/data regex analysis
 - Retrieve app info with dumpsys
 
+Pull app data (/data/data)
+
+![Drozer](example/data.data.png)
+Jadx decompile and key/secret search
+![Drozer](example/regex.gif)
+
 ### 4. Frida Tools
 - Frida server setup and script execution
 
