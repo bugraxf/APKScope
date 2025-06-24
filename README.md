@@ -116,6 +116,8 @@ APKScope/
 ![/data/data/<package-name>](example/data.data.png)
 - APK attack surface analysis (decompile + manifest analysis)
   By selecting the third-party application you want to analyze from the device, you can examine security-related features such as permissions, activities, content providers, backup settings, and cleartext traffic. Additionally, the relevant ADB commands are automatically generated for your convenience.
+![attack surface analysis ](example/Attack%20Surface-1.png)
+![attack surface analysis ](example/Attack%20Surface-2.png) 
 *Jadx decompile and key/secret search
 -By selecting option 1, you can list the third-party applications installed on the device, pull them from the device, and then perform secret analysis within the APK package by choosing step 2 (search) or step 3 (regex-based analysis using config/regex.json).To reduce false positives in the output, you can improve the patterns using a blacklist(config/blacklist.json).
 ![regex analysis](example/regex.gif)
