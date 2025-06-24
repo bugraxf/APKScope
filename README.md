@@ -128,7 +128,7 @@ The Application Package Information (dumpsys) automatically collects and analyze
 
 ### 4. Frida Tools
 - Frida server setup and script execution
-
+![regex analysis](example/frida.gif)
 ### 5. APK Build & Sign
 - Rebuild and sign decompiled APKs
 
