@@ -1777,7 +1777,7 @@ def decompile_with_jadx_and_search(device):
         if result.returncode == 0:
             print_success(f"Decompile completed. Results in '{out_dir}'.")
         else:
-            print_success(f"Decompile completed. Check logs in '{out_dir}'.")
+            print_error(f"Decompile failed! Check logs in '{out_dir}'.\nError: {result.stderr.strip()}")
     elif secim == "2":
         decompile_data_dir = BASE_DECOMPILE_DIR
         if not os.path.exists(decompile_data_dir):
