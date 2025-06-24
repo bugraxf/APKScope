@@ -127,7 +127,7 @@ By selecting option 1, you can list the third-party applications installed on th
 
 ### /data/data/ secret search
 You can list the third-party applications installed on the device and perform regex-based analysis on the local storage of the selected application under /data/data/<package-name> using config/regex.json. To reduce false positives in the output, you can improve the patterns using a blacklist(config/blacklist.json).
-![regex analysis](example/regex2.gif)
+![regex analysis](example/regex2.png)
 
 ### Retrieve app info with dumpsys
  Retrieve information about installed applications
