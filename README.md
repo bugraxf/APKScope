@@ -122,6 +122,9 @@ APKScope/
 -By selecting option 1, you can list the third-party applications installed on the device, pull them from the device, and then perform secret analysis within the APK package by choosing step 2 (search) or step 3 (regex-based analysis using config/regex.json).To reduce false positives in the output, you can improve the patterns using a blacklist(config/blacklist.json).
 ![regex analysis](example/regex.gif)
 *You can list the third-party applications installed on the device and perform regex-based analysis on the local storage of the selected application under /data/data/<package-name> using config/regex.json. To reduce false positives in the output, you can improve the patterns using a blacklist(config/blacklist.json).
+*Retrieve app info with dumpsys
+The Application Package Information (dumpsys) automatically collects and analyzes detailed information about a third-party application installed on the device. This analysis includes basic details such as the app's package name, version information, installation time, UID, and data directory; declared, requested, and granted permissions; registered Content Provider components; the main activity (entry point); and Broadcast Receivers that listen to system events. This information is critical for understanding which resources the app accesses, how it operates in the background, and for identifying potential security risks.
+
 
 ### 4. Frida Tools
 - Frida server setup and script execution
